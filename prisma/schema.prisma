@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Contact {
+  id         BigInt  @id @default(autoincrement())
+  image      String? @db.VarChar
+  title      String
+  url        String?
+  coordonnee String?
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model EducationExp {
+  id          BigInt   @id @default(autoincrement())
+  title       String
+  description String?
+  date        DateTime @db.Date
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Project {
+  id             BigInt           @id @default(autoincrement())
+  image          String           @db.VarChar
+  title          String
+  description    String
+  slug           String?
+  giturl         String           @db.VarChar
+  weburl         String?          @db.VarChar
+  Skills_Project Skills_Project[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Skills {
+  id             BigInt           @id @default(autoincrement())
+  title          String
+  image          String           @db.VarChar
+  Skills_Project Skills_Project[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model Skills_Project {
+  id        BigInt  @id @default(autoincrement())
+  Poject_id BigInt
+  Skills_id BigInt
+  Project   Project @relation(fields: [Poject_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "public_Skills_Project_Poject_id_fkey")
+  Skills    Skills  @relation(fields: [Skills_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "public_Skills_Project_Skills_id_fkey")
+}
