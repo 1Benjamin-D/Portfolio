@@ -12,7 +12,7 @@ export default async function Skills() {
               <div key={skills.id} className='flex flex-col items-center'>
                 <Image src={skills.image} alt={skills.title} className='' width={1000} height={1000} style={{ width: "80px", height: "auto" }} />
                 <div>
-                  <p className=' font-OCRAEXT'>{skills.title}</p>
+                  
                 </div>
               </div>
             </div>
