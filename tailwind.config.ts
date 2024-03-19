@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        DeadSpaceTitle:[`var(--font-DeadSpaceTitle)`],
+        falconpunchstraight:[`var(--font-falconpunchstraight)`],
+        OCRAEXT:[`var(--font-OCRAEXT)`],
+        Orienta_Regular:[`var(--font-Orienta_Regular)`],
+      }
     },
   },
   plugins: [],
