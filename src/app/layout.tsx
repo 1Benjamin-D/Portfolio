@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className=" bg-[url('../../public/images/bg-star.png')] bg-cover bg-no-repeat">
+    <html lang="en" className=" bg-[url('../../public/images/bg-star-3.webp')] bg-cover bg-center bg-no-repeat">
       <body className={`${inter.className} ${DeadSpaceTitle.variable} ${falconpunchstraight.variable} ${OCRAEXT.variable} ${Orienta_Regular.variable}`}>{children}</body>
     </html>
   );

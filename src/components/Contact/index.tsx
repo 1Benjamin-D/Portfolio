@@ -12,6 +12,7 @@ interface FormErrors {
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
     const [errors, setErrors] = useState<FormErrors>({});
+    const [messageSent, setMessageSent] = useState(false);
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -53,7 +54,7 @@ const Contact = () => {
                     setIsSubmitting(false);
                     form.reset();
                     setErrors({});
-                    alert("Votre message a été envoyé avec succès!");
+                    setMessageSent(true);
                 })
                 .catch(() => {
                     alert("Une erreur s'est produite. Veuillez réessayer.");
@@ -63,13 +64,17 @@ const Contact = () => {
     };
     return (
         <div className=" p-4">
-            <h2 className=" font-DeadSpaceTitle">Contact</h2>
+            <div className="title">
+                <h2 className=" font-DeadSpaceTitle text-4xl">C o n t a c t</h2>
+            </div>
             <form
                 onSubmit={sendEmail}
                 className="flex flex-col gap-4 items-center mt-5 text-black"
             >
                 <div className="flex flex-col">
-                    <label htmlFor="user_name" className=" text-[#EFEFEF]">Name</label>
+                    <span className="title2">
+                        <label htmlFor="user_name" className=" text-[#EFEFEF] font-DeadSpaceTitle text-xl">N a m e</label>
+                    </span>
                     <input
                         type="text"
                         name="user_name"
@@ -79,7 +84,9 @@ const Contact = () => {
                     {errors.user_name && <p style={{ color: "red" }}>{errors.user_name}</p>}
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="user_email" className=" text-[#EFEFEF]">Email</label>
+                    <span className="title2">
+                        <label htmlFor="user_email" className=" text-[#EFEFEF] font-DeadSpaceTitle text-xl">E m a i l</label>
+                    </span>
                     <input
                         type="email"
                         name="user_email"
@@ -92,7 +99,9 @@ const Contact = () => {
                 </div>
 
                 <div className="flex flex-col">
-                    <label htmlFor="message" className=" text-[#EFEFEF]">Message</label>
+                    <span className="title2">
+                        <label htmlFor="message" className=" text-[#EFEFEF] font-DeadSpaceTitle text-xl">M e s s a g e</label>
+                    </span>
                     <textarea
                         placeholder="Message"
                         name="message"
@@ -100,13 +109,17 @@ const Contact = () => {
                     ></textarea>
                     {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
                 </div>
-
-                <input
-                    type="submit"
-                    value="Envoyer"
-                    disabled={isSubmitting}
-                    className="border border-gray-500 cursor-pointer px-4 py-2 rounded-md bg-[#3454D1] text-[#EFEFEF]"
-                />
+                {messageSent && (
+                    <p className=" text-green-600">Votre message a été envoyé avec succès!</p>
+                )}
+                <span className="title3">
+                    <input
+                        type="submit"
+                        value="S e n d"
+                        disabled={isSubmitting}
+                        className="border border-gray-500 cursor-pointer px-4 py-2 rounded-md bg-[#3454D1] text-[#EFEFEF] font-OCRAEXT text-xl"
+                    />
+                </span>
             </form>
         </div>
     );
