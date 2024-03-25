@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local"; 
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const DeadSpaceTitle = localFont({
   src: '../../public/fonts/DeadSpaceTitleFont.ttf',
@@ -18,7 +15,7 @@ const falconpunchstraight = localFont({
 }); 
 
 const OCRAEXT = localFont({
-  src: '../../public/fonts/OCRAEXT.TTF',
+  src: '../../public/fonts/ocraext.ttf',
   display: 'swap',
   variable: '--font-OCRAEXT',
 }); 
@@ -41,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className=" bg-[url('../../public/images/bg-star-3.webp')] bg-cover bg-center bg-no-repeat">
-      <body className={`${inter.className} ${DeadSpaceTitle.variable} ${falconpunchstraight.variable} ${OCRAEXT.variable} ${Orienta_Regular.variable}`}>{children}</body>
+      <body className={`${DeadSpaceTitle.variable} ${falconpunchstraight.variable} ${OCRAEXT.variable} ${Orienta_Regular.variable}`}>{children}</body>
     </html>
   );
 }
