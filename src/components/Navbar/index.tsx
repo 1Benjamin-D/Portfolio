@@ -26,7 +26,7 @@ export default function Navbar() {
         <nav className="relative p-4 text-or font-Orienta_Regular">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <img src="/image/Logo-mon-site.svg" alt="Logo de votre entreprise" className="h-16 w-16" />
+                    <img src="/images/logo.webp" alt="Logo" className="h-16 w-auto" />
                 </div>
 
                 {/* Menu */}
@@ -54,7 +54,7 @@ export default function Navbar() {
                     <button
                         onClick={toggleMenu}
                         className="text-or focus:outline-none"
-                        aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                         aria-expanded={menuOpen ? 'true' : 'false'}
                     >
                         <svg
