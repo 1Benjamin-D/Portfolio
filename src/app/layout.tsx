@@ -18,7 +18,7 @@ const falconpunchstraight = localFont({
 }); 
 
 const OCRAEXT = localFont({
-  src: '../../public/fonts/OCRAEXT.ttf',
+  src: '../../public/fonts/OCRAEXT.TTF',
   display: 'swap',
   variable: '--font-OCRAEXT',
 }); 
