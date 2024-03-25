@@ -7,7 +7,7 @@ import Social from '@/components/Social';
 export default async function Home() {
 
   return (
-    <main className="text-[#EFEFEF] text-center">
+    <main className="text-[#EFEFEF] text-center" id='home'>
       <Navbar/>
       <div className='title'>
       <h1 className=' font-DeadSpaceTitle md:text-7xl text-4xl'>B e n j a m i n <br /> D e s m e t</h1>

@@ -5,17 +5,17 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     useEffect(() => {
 
-            const navLinks = document.querySelectorAll('.navLinks');
+        const navLinks = document.querySelectorAll('.navLinks');
 
-            navLinks.forEach(link => {
-                link.addEventListener('mouseleave', function() {
-                    link.classList.add('delay-300');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseleave', function () {
+                link.classList.add('delay-300');
 
-                    setTimeout(() => {
-                        link.classList.remove('delay-300');
-                    }, 500);
-                });
+                setTimeout(() => {
+                    link.classList.remove('delay-300');
+                }, 500);
             });
+        });
     }, []);
 
     const toggleMenu = () => {
@@ -23,29 +23,29 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="relative p-4 text-or">
+        <nav className="relative p-4 text-or font-Orienta_Regular">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <img src="/image/Logo-mon-site.svg" alt="Logo de votre entreprise" className="h-16 w-16"/>
+                    <img src="/image/Logo-mon-site.svg" alt="Logo de votre entreprise" className="h-16 w-16" />
                 </div>
 
                 {/* Menu */}
                 <div className="sm:flex hidden">
-                    <a href="#accueil" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-700 rounded-md relative">
-                        Accueil
-                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-white transition-shadow duration-300 before:content-before"></span>
+                    <a href="#home" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                        Home
+                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#aPropos" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-700 rounded-md relative">
-                        À Propos
-                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-white transition-shadow duration-300 before:content-before"></span>
+                    <a href="#skills" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                        Skills
+                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#projets" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-700 rounded-md relative">
-                        Projets
-                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-white transition-shadow duration-300 before:content-before"></span>
+                    <a href="#projects" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                        Projects
+                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#contact" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-700 rounded-md relative">
+                    <a href="#contact" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
                         Contact
-                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-white transition-shadow duration-300 before:content-before"></span>
+                        <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
                 </div>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <div className="sm:hidden">
                     <button
                         onClick={toggleMenu}
-                        className="text-or focus:outline-none focus:bg-stone-900"
+                        className="text-or focus:outline-none"
                         aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
                         aria-expanded={menuOpen ? 'true' : 'false'}
                     >
@@ -77,10 +77,10 @@ export default function Navbar() {
 
             {/* Menu déroulant */}
             <div className={`sm:hidden flex flex-col items-center justify-center absolute top-full right-0 h-80 w-full text-center -mt-4 rounded-md bg-stone-900 ${menuOpen ? 'block' : 'hidden'} shadow-custom`}>
-                <a href="#accueil" className="block text-or py-2 px-4"><span className="shadow">Accueil</span></a>
-                <a href="#a-propos" className="block text-or py-2 px-4"><span className="shadow">À Propos</span></a>
-                <a href="#projets" className="block text-or py-2 px-4"><span className="shadow">Projets</span></a>
-                <a href="#contact" className="block text-or py-2 px-4"><span className="shadow">Contact</span></a>
+                <a href="#home" className="block text-or py-4 px-4"><span className="shadow">Home</span></a>
+                <a href="#skills" className="block text-or py-4 px-4"><span className="shadow">Skills</span></a>
+                <a href="#projects" className="block text-or py-4 px-4"><span className="shadow">Projects</span></a>
+                <a href="#contact" className="block text-or py-4 px-4"><span className="shadow">Contact</span></a>
             </div>
         </nav>
     )

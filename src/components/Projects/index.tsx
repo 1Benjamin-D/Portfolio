@@ -7,8 +7,8 @@ export default async function Projects() {
 
     return (
         <div>
-            <div className="title">
-                <h2 className=' mb-[70px] font-DeadSpaceTitle text-4xl'>P r o j e t s</h2>
+            <div className="title" id='projects'>
+                <h2 className=' mb-[70px] font-DeadSpaceTitle text-4xl'>P r o j e c t s</h2>
             </div>
             <ul className="flex flex-col gap-12">
                 {projects.map((project: any, index: number) => (
@@ -16,9 +16,9 @@ export default async function Projects() {
                         {index % 2 === 0 ? (
                             <div className=" flex flex-col md:flex-row gap-4 hover:bg-slate-500 p-4 rounded-lg relative">
                                 <div className="relative">
-                                    <div className="absolute inset-0 bg-[#9B1D20] blur-sm md:left-[-0.575rem] md:bottom-[-0.575rem] z-0 bottom-[-0.575rem]" />
+                                    <div className="absolute inset-0 bg-[#9B1D20] blur-sm md:left-[-0.575rem] md:bottom-[-0.575rem] z-0 bottom-[-0.575rem] rounded-2xl" />
                                     <div className="relative w-full h-full">
-                                        <Image src={project.image} alt={project.slug} width={1000} height={1000} className='w-full h-full z-10 object-cover' />
+                                        <Image src={project.image} alt={project.slug} width={1000} height={1000} className='w-full h-full z-10 object-cover rounded-lg' />
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-5 font-Orienta_Regular justify-center'>
@@ -39,9 +39,9 @@ export default async function Projects() {
                         ) : (
                             <div className="flex flex-col md:flex-row-reverse gap-4 hover:bg-slate-500 p-4 rounded-lg relative">
                                 <div className="relative">
-                                    <div className="absolute inset-0 bg-[#9B1D20] blur-sm md:right-[-0.575rem] md:bottom-[-0.575rem] z-0 bottom-[-0.575rem]" />
+                                    <div className="absolute inset-0 bg-[#9B1D20] blur-sm md:right-[-0.75rem] md:bottom-[-0.575rem] z-0 bottom-[-0.575rem] rounded-2xl" />
                                     <div className="relative w-full h-full">
-                                        <Image src={project.image} alt={project.slug} width={1000} height={1000} className='w-full h-full z-10 object-cover' />
+                                        <Image src={project.image} alt={project.slug} width={1000} height={1000} className='w-full h-full z-10 object-cover rounded-lg' />
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-5 font-Orienta_Regular justify-center'>

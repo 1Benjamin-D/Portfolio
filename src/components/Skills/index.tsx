@@ -5,7 +5,7 @@ export default async function Skills() {
   const skills = await getSkills();
   return (
     <div>
-      <div className="title">
+      <div className="title" id="skills">
         <h2 className=' mb-[70px] font-DeadSpaceTitle text-4xl'>S k i l l s</h2>
       </div>
       <ul className='grid lg:grid-cols-4 grid-rows-4 gap-6 text-center items-center justify-center  grid-cols-2'>

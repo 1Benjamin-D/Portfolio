@@ -63,7 +63,7 @@ const Contact = () => {
         }
     };
     return (
-        <div className=" p-4">
+        <div className=" p-4" id="contact">
             <div className="title">
                 <h2 className=" font-DeadSpaceTitle text-4xl">C o n t a c t</h2>
             </div>
