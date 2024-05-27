@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="relative p-4 text-or font-Orienta_Regular">
+        <nav className="relative p-4 text-or font-Luciole">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
                     <Image src="/images/logo.webp" alt="Logo" className="h-16 w-auto" width={343} height={275} />

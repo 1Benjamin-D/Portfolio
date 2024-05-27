@@ -11,7 +11,7 @@ const config: Config = {
       fontFamily:{
         DeadSpaceTitle:[`var(--font-DeadSpaceTitle)`],
         falconpunchstraight:[`var(--font-falconpunchstraight)`],
-        OCRAEXT:[`var(--font-OCRAEXT)`],
+        Luciole:[`var(--font-Luciole)`],
         Orienta_Regular:[`var(--font-Orienta_Regular)`],
       }
     },

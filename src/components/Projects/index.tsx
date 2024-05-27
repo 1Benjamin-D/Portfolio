@@ -1,4 +1,4 @@
-import getProjects from "@/api/getProjects"
+import getProjects from "@/api/getProjects";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,8 +26,10 @@ export default async function Projects() {
                                         <li className='text-center font-falconpunchstraight decoration-solid underline text-lg'><h2>{project.title}</h2></li>
                                     </span>
                                     <p className=" font-Orienta_Regular">{project.description}</p>
-                                    <p><span className="">Repository:</span> <Link href={project.giturl} className=' hover:text-[#4B0082] italic'>{project.giturl}</Link></p>
-                                    {project.weburl && <p><span className="">Website:</span> <Link href={project.weburl} className=' hover:text-[#4B0082] italic'>{project.weburl}</Link></p>}
+                                    <div className="flex items-center justify-center gap-10">
+                                        <Link href={project.giturl}><Image src={"/images/File.png"} alt="git_link" width={70} height={70} /></Link>
+                                        {project.weburl && <Link href={project.weburl}><Image src={"/images/WWW.png"} alt="web_link" width={70} height={70} /></Link>}
+                                    </div>
                                     <div className='flex flex-row justify-around'>
                                         {project.Skills_Project.map((projectSkill: any) => (
                                             <Image key={projectSkill.id} src={projectSkill.Skills.image} alt={projectSkill.Skills.title} width={1000} height={1000} style={{ width: "40px", height: "auto" }} />
@@ -45,12 +47,16 @@ export default async function Projects() {
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-5 font-Orienta_Regular justify-center'>
-                                    <span className="title2">
-                                        <li className='text-center font-falconpunchstraight decoration-solid underline text-lg'><h2>{project.title}</h2></li>
-                                    </span>
-                                    <p>{project.description}</p>
-                                    <p>Repository: <Link href={project.giturl} className=' hover:text-[#4B0082] italic'>{project.giturl}</Link></p>
-                                    {project.weburl && <p>Website: <Link href={project.weburl} className=' hover:text-[#4B0082] italic'>{project.weburl}</Link></p>}
+                                    <div className="flex flex-col gap-5">
+                                        <span className="title2">
+                                            <li className='text-center font-falconpunchstraight decoration-solid underline text-lg'><h2>{project.title}</h2></li>
+                                        </span>
+                                        <p>{project.description}</p>
+                                        <div className="flex items-center justify-center gap-10">
+                                            <Link href={project.giturl}><Image src={"/images/File.png"} alt="git_link" width={70} height={70} /></Link>
+                                            {project.weburl && <Link href={project.weburl}><Image src={"/images/WWW.png"} alt="web_link" width={70} height={70} /></Link>}
+                                        </div>
+                                    </div>
                                     <div className='flex flex-row justify-around'>
                                         {project.Skills_Project.map((projectSkill: any) => (
                                             <Image key={projectSkill.id} src={projectSkill.Skills.image} alt={projectSkill.Skills.title} width={1000} height={1000} style={{ width: "40px", height: "auto" }} />
