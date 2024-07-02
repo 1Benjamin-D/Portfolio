@@ -7,7 +7,7 @@ export default async function Projects() {
 
     return (
         <div>
-            <div className="title" id='projects'>
+            <div className="title" id='projects' tabIndex={21}>
                 <h2 className=' mb-[70px] font-DeadSpaceTitle text-4xl'>P r o j e c t s</h2>
             </div>
             <ul className="flex flex-col gap-12">

@@ -32,19 +32,19 @@ export default function Navbar() {
 
                 {/* Menu */}
                 <div className="sm:flex hidden">
-                    <a href="#home" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                    <a href="#home" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline" tabIndex={1}>
                         Home
                         <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#skills" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                    <a href="#skills" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline" tabIndex={2}>
                         Skills
                         <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#projects" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                    <a href="#projects" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline" tabIndex={3}>
                         Projects
                         <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>
-                    <a href="#contact" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline">
+                    <a href="#contact" className="navLinks ease-out transition-colors mx-1 py-2 px-4 hover:bg-gray-500 rounded-md relative hover:underline" tabIndex={4}>
                         Contact
                         <span className="absolute ease-in inset-0 rounded-md hover:shadow-[3px_3px_0px_1px_rgba(0,0,0,0.3)] hover:shadow-[#9B1D20] transition-shadow duration-300 before:content-before"></span>
                     </a>

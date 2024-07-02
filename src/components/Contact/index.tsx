@@ -112,12 +112,12 @@ const Contact = () => {
                 {messageSent && (
                     <p className=" text-green-600">Votre message a été envoyé avec succès!</p>
                 )}
-                <span className="title3">
+                <span className="">
                     <input
                         type="submit"
                         value="S e n d"
                         disabled={isSubmitting}
-                        className="border border-gray-500 cursor-pointer px-4 py-2 rounded-md bg-[#3454D1] text-[#EFEFEF] font-OCRAEXT text-xl"
+                        className="border border-gray-500 cursor-pointer px-4 py-2 rounded-md bg-[#F57E00] text-[#000000] font-Luciole text-xl"
                     />
                 </span>
             </form>

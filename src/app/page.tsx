@@ -10,7 +10,7 @@ export default async function Home() {
     <main className="text-[#EFEFEF] text-center" id='home'>
       <Navbar/>
       <div className='title'>
-      <h1 className=' font-DeadSpaceTitle md:text-7xl text-4xl'>B e n j a m i n <br /> D e s m e t</h1>
+      <h1 tabIndex={5} className=' font-DeadSpaceTitle md:text-7xl text-4xl'>B e n j a m i n <br /> D e s m e t</h1>
       </div>
       <Social />
       <Skills />
