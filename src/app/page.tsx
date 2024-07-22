@@ -16,7 +16,7 @@ export default async function Home() {
       <Skills />
       <Projects />
       <Contact />
-      <div>
+      <div className='text-center p-2'>
         <p>© 2024 Benjamin Desmet. All rights reserved.</p>
       </div>
     </main>
